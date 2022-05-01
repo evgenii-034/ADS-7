@@ -50,7 +50,7 @@ head = tail = item;
 a->prev = item;
 item->next = a;
 head = item;
-} else { 
+} else {
 a->prev->next = item;
 item->prev = a->prev;
 item->next = a;
