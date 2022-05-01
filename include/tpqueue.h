@@ -39,17 +39,17 @@ ITEM* a = head;
 ITEM* item = create(data);
 while (a && a->data.prior >= data.prior)
 a = a->next;
-if (!a && head) { // вставка в конец
+if (!a && head) {
 tail->next = item;
 tail->next->prev = tail;
 tail = item;
-} else if (!a && !head) {// вставка в пустой список
+} else if (!a && !head) {
 head = tail = item;
-} else if (!a->prev) { 
+} else if (!a->prev){ 
 a->prev = item;
 item->next = a;
 head = item;
-} else { 
+} else{ 
 a->prev->next = item;
 item->prev = a->prev;
 item->next = a;
