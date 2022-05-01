@@ -4,8 +4,8 @@
 #include <string>
 template<typename T>
 class TPQueue {
-  private:
-    struct ITEM {
+   private:
+struct ITEM {
         T data;
         ITEM* next;
         ITEM* prev;
@@ -19,7 +19,8 @@ class TPQueue {
     }
     ITEM* head;
     ITEM* tail;
-   public:
+  
+    public:
     T pop() {
         if (head) {
             ITEM* a = head->next;
