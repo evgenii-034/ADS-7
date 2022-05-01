@@ -2,6 +2,7 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 #include <string>
+
 template<typename T>
 class TPQueue {
  private:
@@ -19,7 +20,7 @@ return item;
 }
 ITEM* head;
 ITEM* tail;
-  
+
  public:
 T pop() {
 if (head) {
@@ -45,11 +46,11 @@ tail->next->prev = tail;
 tail = item;
 } else if (!a && !head) {
 head = tail = item;
-} else if (!a->prev){ 
+} else if (!a->prev) {
 a->prev = item;
 item->next = a;
 head = item;
-} else{ 
+} else { 
 a->prev->next = item;
 item->prev = a->prev;
 item->next = a;
